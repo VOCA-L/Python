@@ -6,6 +6,7 @@ import gui_client
  
 QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
  
+ip = "192.168.0.245"
 port = 5614
  
 class CWidget(QWidget):
@@ -20,7 +21,7 @@ class CWidget(QWidget):
         self.c.stop()
  
     def initUI(self):
-        self.setWindowTitle('클라이언트')
+        self.setWindowTitle('Debugging Client')
          
         # 클라이언트 설정 부분
         ipbox = QHBoxLayout()
@@ -32,7 +33,7 @@ class CWidget(QWidget):
  
         label = QLabel('Server IP')
         self.ip = QLineEdit()
-        self.ip.setInputMask('000.000.000.000;_')
+        self.ip.setInputMask('192.168.000.245;_')
         box.addWidget(label)
         box.addWidget(self.ip)
  
